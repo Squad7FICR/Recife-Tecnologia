@@ -1,0 +1,17 @@
+@media (max-width: 1000px) {
+    .login-content {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .login-content_img {
+        display: none;
+    }
+    .login-form-container {
+        margin: 0px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .login-form_content {
+        padding: 0px;
+    }
+}

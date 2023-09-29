@@ -1,6 +1,5 @@
 .login-container {
-    background-color: var(--cor-P1);
-    display: flex;
+    background-color: var(--cor-P0);
     flex-direction: column;
     align-items: center;
     max-width: 100%;
@@ -8,19 +7,22 @@
     border: 1px solid var(--cor-P0);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
     overflow: hidden;
+    margin: 0px 30px 90px 30px;
     padding: 20px;
+    display: flex;
 }
 
 .login-content {
-    margin-top: 120px;
+    margin-top: 30px;
     grid-template-columns: 1fr 1fr;
     background-color: var(--cor-B0);
+    box-shadow: 2px 2px 2px 0px rgba(194, 194, 194, 0.25);
     text-align: center;
     padding: 20px;
     display: grid;
     border-radius: 30px;
-    gap: 30px;
     justify-content: center;
+    gap: 80px;
 }
 
 
@@ -28,19 +30,26 @@
     border-radius: 20px;
     box-shadow: 2px 2px 2px 0px rgba(194, 194, 194, 0.25);
     border: 1px solid #B6AAAA;
+    margin: 180px 60px 180px 60px;
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
 .login-form-container {
+    
     flex-direction: column;
     border-radius: 20px;
     border: 1px solid #B6AAAA;
     background: var(--B1, #FFF);
     box-shadow: 2px 2px 2px 0px rgba(194, 194, 194, 0.25);
-    margin: 20px 20px;
+    margin: 120px 20px 120px 20px;
     max-width: 360px;
+    max-height: 430px;
     align-items: center;
     display: flex;
     padding: 20px;
@@ -56,13 +65,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 20px;   
 }
+
+.login-form_content a#recoveryPass {
+    color: var(--COR-C1);
+    text-decoration: none;
+    margin-left: 185px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.login-form_content a#enterAccount {
+    margin-top: 18px;
+    width: 140px;
+    height: 42px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form_content a#enterAccount:hover {
+    background-color: var(--COR-L0);
+    color: var(--cor-B1);
+    transition: 0.5s;
+}
+
 
 
 .login-form_content label {
     margin: 5px 0px;
-    text-align: center;
+    margin-right: 160px;
 }
 
 
@@ -84,3 +118,4 @@
     border: 1px solid #FF7707;
     outline: none;
 }
+

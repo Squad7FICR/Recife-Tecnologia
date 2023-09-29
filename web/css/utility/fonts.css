@@ -1,4 +1,15 @@
-.font-1-p {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap');
+
+.font-1-pp {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+
+
+.font-1-m {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-style: normal;

@@ -1,6 +1,8 @@
 @import './utility/geral.css';
 @import './utility/colors.css';
 @import './utility/fonts.css';
+@import './utility/buttons.css';
 
-@import './LoginScreen.css';
+
+@import './loginScreen/LoginScreen.css';
 @import './responsive/LoginResponse.css';
