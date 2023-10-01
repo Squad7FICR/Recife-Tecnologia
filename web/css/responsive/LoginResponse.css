@@ -2,6 +2,7 @@
     .login-content {
         grid-template-columns: 1fr;
         gap: 0px;
+        margin: 160px;
     }
     .login-content_img {
         display: none;
@@ -11,7 +12,17 @@
         max-width: 100%;
         max-height: 100%;
     }
+    .login-content_form_img {
+        margin: 10px 70px 10px 70px;
+
+    }
     .login-form_content {
         padding: 0px;
+    }
+    .login-form_content a#recoveryPass {
+        margin-top: 5px;
+    }
+    .login-form_content button#enterAccount {
+        margin-top: 10px;
     }
 }
