@@ -3,6 +3,6 @@
 @import './utility/fonts.css';
 @import './utility/buttons.css';
 
-
+@import './dashboard/dashboard.css';
 @import './loginScreen/LoginScreen.css';
 @import './responsive/LoginResponse.css';

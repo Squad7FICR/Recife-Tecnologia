@@ -1,0 +1,46 @@
+/**ESTILIZAÇÃO DO MENU**/
+ 
+.container nav ul li{
+    max-width: 100%;
+    color: var(--cor-B0);
+    box-sizing: border-box;
+    display: inline-block;
+    align-items: center;
+    padding: 15px;
+    
+}
+
+.containerdocontainer{
+    background-color: var(--cor-P2);
+    max-width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.container-user{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.img-user{
+    filter: invert();
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.container-search, .search{
+    width: 200px;
+    height: 30px;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: aliceblue;
+    display: inline-flex;
+    justify-content: center;
+}
+.search:focus{
+    outline: none;
+}
+
