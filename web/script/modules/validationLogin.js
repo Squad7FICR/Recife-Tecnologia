@@ -1,4 +1,4 @@
-export default function Init() {
+export default function InitValidationLogin() {
     document.addEventListener('DOMContentLoaded', function () {
         var loginForm = document.querySelector('#loginForm');
         var loginInput = document.querySelector('input[name="login"]');
