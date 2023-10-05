@@ -1,46 +1,89 @@
-/**ESTILIZAÇÃO DO MENU**/
- 
-.container nav ul li{
-    max-width: 100%;
-    color: var(--cor-B0);
-    box-sizing: border-box;
-    display: inline-block;
-    align-items: center;
-    padding: 15px;
-    
-}
+.header-bg {
+    background-color: var(--cor-P1);
+    width: auto;
+  }
 
-.containerdocontainer{
-    background-color: var(--cor-P2);
-    max-width: 100%;
-    height: 10vh;
+  .header {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
     align-items: center;
-}
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 450px;
+  }
+ 
 
-.container-user{
-    display: inline-block;
-    cursor: pointer;
-}
 
-.img-user{
-    filter: invert();
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-}
 
-.container-search, .search{
+  .header .search {
     width: 200px;
     height: 30px;
-    margin-left: 15px;
     border-radius: 10px;
     border: none;
     background-color: aliceblue;
     display: inline-flex;
-    justify-content: center;
+    text-align: center;
 }
-.search:focus{
+
+
+.header-bg .search:focus {
     outline: none;
 }
 
+.header-bg .search::placeholder {
+    color: var(--cor-P2);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+  .header-menu a {
+    display: inline-block;
+    padding: 16px 0px;
+    position: relative;
+    color: var(--cor-B0);
+  }
+  .header-menu a span {
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 26px;
+}
+  
+  .header-menu a::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: var(--COR-L0);
+    margin-top: 4px;
+    transition: 0.3s;
+    position: absolute;
+  }
+  
+  .header-menu a:hover::after,
+  .header-menu a.ativo::after {
+    width: 100%;
+  }
+
+  .header-menu_icons {
+    display: inline-flex;
+    gap: 20px;
+    color: pink;
+  }
+
+  .header-menu_icons span {
+    font-size: 32px;
+    color: var(--cor-B0);
+  }
+
+  .header-menu_icons span:hover {
+    color: var(--COR-L0);
+  }
