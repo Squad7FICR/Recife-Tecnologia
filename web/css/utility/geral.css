@@ -8,10 +8,15 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
   font-family: Montserrat, sans-serif;
   background-color: var(--cor-P0);
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
 }
+
 
 h1,
 h2,
