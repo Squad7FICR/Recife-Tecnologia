@@ -1,5 +1,6 @@
 
-@media (max-width: 1366px) {
+
+@media (max-width: 1920px) {
     .login-container {
         padding-top: 40px;
         margin-bottom: 20px;
@@ -13,6 +14,12 @@
     }
     .login-content_img {
         margin-top: 130px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .login-container {
+        padding-top: 10px;
     }
 }
 
@@ -92,7 +99,7 @@
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 320px) {
     .login-content {
         margin: 60px 0px 60px 0px;
         width: 200px;
