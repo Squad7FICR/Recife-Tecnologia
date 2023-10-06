@@ -22,6 +22,12 @@
 }
 
 
+@media (max-width: 1366px) {
+    .login-container {
+        padding-top: 10px;
+    }
+}
+
 @media (max-width: 1000px) {
     #body-login {
         background-color: white;
