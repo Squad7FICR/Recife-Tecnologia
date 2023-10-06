@@ -7,7 +7,7 @@
   margin-right: auto;
 }
 
-body {
+#body-login {
   margin: 0;
   font-family: Montserrat, sans-serif;
   background-color: var(--cor-P0);
@@ -16,7 +16,11 @@ body {
   align-items: center; 
   min-height: 100vh; 
 }
-
+#body-dashboard{
+  margin: 0px;
+  font-family: Montserrat, sans-serif;
+  background-color: var(--cor-P0); 
+}
 
 h1,
 h2,
