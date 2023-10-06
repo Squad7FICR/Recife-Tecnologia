@@ -57,8 +57,8 @@
 
 
 .header-bg .search::placeholder {
-    color: var(--cor-P2);
-    font-size: 14px;
+    color: var(--cor-P3);
+    font-size: 12px;
     font-weight: 500;
 }
 
