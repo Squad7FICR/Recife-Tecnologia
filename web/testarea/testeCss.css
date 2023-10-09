@@ -137,7 +137,19 @@ input[type="text"] {
         width: 30px;
         height: 30px;
         position: relative;
-    } 
+    }
+    
+    #hamburger .bar {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+    
     #hamburger::after,
     #hamburger::before,
     #hamburger div {
@@ -150,6 +162,7 @@ input[type="text"] {
       transition: 0.3s;
       position: relative;
     }
+
     #hamburger.closed::before {
         transform: rotate(45deg);
         margin-top: 20px;
@@ -166,9 +179,50 @@ input[type="text"] {
     #hamburger.closed div {
         display: none;
     }
-} 
 
+    
+    /* Estilos do menu móvel */
+    #mobile-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #e7e7e7;
+        transition: 0.6s;
+        z-index: 1000;
+        width: 200px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    #mobile-menu.active {
+        display: block;
+    }
+    
+    /* Estilize as opções do menu quando estiver ativo */
+    #mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #mobile-menu li {
+        margin: 10px 0;
+    }
+    
+    #mobile-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    
+    #mobile-menu a:hover {
+        background-color: #ddd;
+    }
+    
 
+}
 
 
 
