@@ -6,3 +6,7 @@
 @import './dashboard/dashboard.css';
 @import './loginScreen/LoginScreen.css';
 @import './responsive/LoginResponse.css';
+@import './responsive/DashboardResponse.css';
+
+@import './dashboard/teste.css';
+
