@@ -5,14 +5,14 @@
 }
 
 .header-bg {
-    background-color: var(--cor-P1);
+    background-color: pink;
     padding: 30px 0 30px 0;
 }
 
 .container-imgsearch {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color: var(--cor-P2);
+    background-color: black;
     width: 30px;
     padding-left: 5px;
     display: flex;
@@ -25,15 +25,15 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border: none;
-    background-color: var(--cor-P2);
-    color: var(--cor-B0);
+    background-color: black;
+    color: white;
     display: inline-flex;
     text-align: start;
 }
 
 .header-container .search:focus {
-    background-color: var(--cor-B0);
-    color: var(--cor-P1);
+    background-color: white;
+    color: black;
     width: 200px;
     transition: all 1s;
     outline: none;
@@ -72,7 +72,7 @@ input[type="text"] {
 }
 
 .user-menu a {
-    color: white;
+    color: black;
     text-decoration: none;
     position: relative;
 }
@@ -82,7 +82,7 @@ input[type="text"] {
     display: block;
     height: 2px;
     width: 0px;
-    background: var(--COR-L0);
+    background: orange;
     margin-top: 4px;
     transition: 0.3s;
     position: absolute;
@@ -110,8 +110,67 @@ input[type="text"] {
 
 .menu-list li {
     padding: 10px;
-    border-bottom: 1px solid var(--cor-B0);
+    border-bottom: 1px solid white;
 }
+
+
+  
+
+@media (max-width: 600px) {
+    #ul-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px; /* ajuste este valor conforme necessário */
+        background: #e7e7e7;
+        transition: 0.6s;
+        z-index: 1000;
+    }
+
+    #nav-menu.active #ul-menu {
+        display: block;
+    }
+
+    #hamburger {
+        cursor: pointer;
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+    } 
+    #hamburger::after,
+    #hamburger::before,
+    #hamburger div {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+    #hamburger.closed::before {
+        transform: rotate(45deg);
+        margin-top: 20px;
+        top: 0px;
+        transform-origin: center;
+    }
+    
+    #hamburger.closed::after {
+        transform: rotate(-45deg);
+        bottom: 7px;
+        transform-origin: center;
+    }
+    
+    #hamburger.closed div {
+        display: none;
+    }
+} 
+
+
+
+
 
 
 
