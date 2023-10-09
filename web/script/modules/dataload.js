@@ -1,28 +1,29 @@
 export default function InitdataLoad() {
-function exibirDataAtual() {
+    if (window.location.pathname.endsWith('/dashboard.html')) {
+        document.addEventListener('DOMContentLoaded', function () {
+            function exibirDataAtual() {
+                var dataAtual = new Date();
+                var dataFormatada = dataAtual.toLocaleDateString();
+                document.getElementById("data-atual").textContent = dataFormatada;
+            }
 
-    var dataAtual = new Date();
-  
-    var dataFormatada = dataAtual.toLocaleDateString();
+            function exibirHoraAtual() {
+                function atualizarHora() {
+                    var horaAtual = new Date();
+                    var horaFormatada = horaAtual.toLocaleTimeString([], {
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
+                    document.getElementById("hora-atual").textContent = horaFormatada
+                }
 
-    document.getElementById("data-atual").textContent = dataFormatada;
-}
+                atualizarHora();
 
+                setInterval(atualizarHora, 1000);
+            }
 
-function exibirHoraAtual(){
-    function atualizarHora() {
-        var horaAtual = new Date();
-        var horaFormatada = horaAtual.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        document.getElementById("hora-atual").textContent = horaFormatada
+            exibirDataAtual();
+            exibirHoraAtual();
+        });
     }
-
-    atualizarHora();
-
-    setInterval(atualizarHora, 1000);
-}
-
-window.onload = function() {
-    exibirDataAtual();
-    exibirHoraAtual();
-};
 }
