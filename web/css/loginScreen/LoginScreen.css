@@ -51,7 +51,7 @@
     box-shadow: 2px 2px 2px 0px rgba(194, 194, 194, 0.25);
     margin: 120px 20px 120px 20px;
     max-width: 360px;
-    max-height: 440px;
+    max-height: 480px;
     align-items: center;
     display: flex;
     padding: 20px;
@@ -116,7 +116,7 @@ transition: 0.3s;
 
 
 .login-form_input:focus {
-    border: 1px solid #FF7707;
+    border: 1px solid var(--COR-L0);
     outline: none;
 }
 
