@@ -1,4 +1,4 @@
-
+export default function InitdataLoad() {
 function exibirDataAtual() {
 
     var dataAtual = new Date();
@@ -25,3 +25,4 @@ window.onload = function() {
     exibirDataAtual();
     exibirHoraAtual();
 };
+}

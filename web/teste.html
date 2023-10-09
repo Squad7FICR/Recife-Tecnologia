@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Dashboard</title>
 </head>
-<body>
-    <p id="data-atual"></p>
+<body id="body-dashboard">
+    <header class="header-bg">
+        <div class="header-container">
+            <div class="container-search">
+                <div class="container-imgsearch"><img src="img/Dashboard/find.png" alt="search"></div>
+                <input type="search" name="search" placeholder="Pesquisar..." class="search" />
+            </div>
+            <div class="user-menu font-1-m">
+                <ul>
+                    <a href=""><li>Dashboard</li></a>
+                    <a href=""><li>Relatórios</li></a>
+                    <a href="" id="hora-atual"><li>Hora</li></a>
+                    <a href="" id="data-atual"><li>Data</li></a>
+                    <a href=""><li>Nome Cliente</li></a>
+                    <a href=""><li><img src="./img/Dashboard/exitIcon.svg" alt="Google Icon" width="32" height="32"></li></a>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </header>
 
-    <script src="script/script.js"></script>
+    <main>
+       
+    </main>
+
+    <script type="module" src="./script/script.js"></script>
 </body>
 </html>

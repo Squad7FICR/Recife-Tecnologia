@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}
