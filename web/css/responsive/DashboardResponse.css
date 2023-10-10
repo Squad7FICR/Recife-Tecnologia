@@ -52,6 +52,8 @@
         width: 30px;
         height: 30px;
         position: relative;
+        padding: 0px;
+        box-sizing: border-box;
     }
     
     #hamburger .bar {
@@ -107,6 +109,7 @@
         z-index: 1000;
         width: 200px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in-out 0s;
     }
     
     #mobile-menu.active {
@@ -136,4 +139,4 @@
     }
     
 
-}
+};

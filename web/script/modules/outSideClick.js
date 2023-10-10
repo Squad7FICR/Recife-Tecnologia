@@ -6,19 +6,23 @@ export default function initOutSideClick() {
             const mobileMenu = document.getElementById('mobile-menu');
            
 
-            hamburguerMenu.addEventListener('click', (e=>{
+            hamburguerMenu.addEventListener('click', ()=>{
                 if (hamburguerMenu.classList.contains('closed')) {
                     mobileMenu.classList.add('active');
                 
                 } else 
                 mobileMenu.classList.remove('active');
-            }))
+            })
             
-            document.addEventListener('click', (e =>{
-                if(e.target === hamburguerMenu) {
-                    console.log('oi');
+            document.addEventListener('click', (event =>{
+                if(event.target === hamburguerMenu) {
+                    console.log('funcionou');
                 }
-                else (console.log (e.target));
+                else {
+                    hamburguerMenu.classList.remove('closed')
+                    mobileMenu.classList.remove('active');
+
+                }
             }))
 
             
