@@ -3,51 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./testeCss.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>Dashboard</title>
+    <title>Div Interativa</title>
+    <style>
+        .minha-div {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body id="body-dashboard">
-    <header class="header-bg">
-        <div class="header-container">
-            <div class="container-search">
-                <div class="container-imgsearch"><img src="../img/Dashboard/find.png" alt="search"></div>
-                <input type="search" name="search" placeholder="Pesquisar..." class="search" />
-            </div>
-            <nav class="user-menu font-1-m" id="nav-menu">
-                <span id="hamburger">
-                    
-                
-                    <div></div>
-                </span>
-                <ul id="ul-menu" role="menu">
-                    <li><a href="">Dashboard</a></li>
-                    <li><a href="">Relatórios</a></li>
-                    <li><a href="" id="hora-atual">Hora</a></li>
-                    <li><a href="" id="data-atual">Data</a></li>
-                    <li><a href="">Nome Cliente</a></li>
-                    <li><a href=""><img src="../img/Dashboard/exitIcon.svg" alt="Google Icon" width="32" height="32"></a></li>
-                </ul>
-            </nav>
-            
-            <div id="mobile-menu">
-                <ul>
-                    <li><a href="">Dashboard</a></li>
-                    <li><a href="">Relatórios</a></li>
-                    <li><a href="">Hora</a></li>
-                    <li><a href="">Data</a></li>
-                    <li><a href="">Nome Cliente</a></li>
-                    <li><a href="">Minha conta</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+<body>
+    <div class="minha-div" id="minhaDiv">
+        Clique em mim
+    </div>
 
-    <main>
-       
-    </main>
+    <script>
+        const minhaDiv = document.getElementById('minhaDiv');
 
-    <script type="module" src="./scriptTeste.js"></script>
+        minhaDiv.addEventListener('click', (e) => {
+           if(e.target === minhaDiv) 
+           console.log('Olá, sou a div');
+        else 
+        console.log ("oi");
+        });
+    </script>
 </body>
 </html>
