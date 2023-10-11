@@ -12,7 +12,7 @@
 .container-imgsearch {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background-color: black;
+  background-color: var(--cor-P1);
   width: 30px;
   padding-left: 5px;
   display: flex;
@@ -25,15 +25,15 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border: none;
-  background-color: black;
-  color: white;
+  background-color: var(--cor-P1);
+  color: var(--cor-B0);
   display: inline-flex;
   text-align: start;
 }
 
 .header-container .search:focus {
-  background-color: white;
-  color: black;
+  background-color: var(--cor-B0);
+  color: var(--cor-P1);
   width: 200px;
   transition: all 1s;
   outline: none;
@@ -110,7 +110,7 @@ input[type="text"] {
 
 .menu-list li {
   padding: 10px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--cor-B0);
 }
 
 #mobile-menu {
