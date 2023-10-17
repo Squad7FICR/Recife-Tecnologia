@@ -27,6 +27,8 @@
   border: none;
   background-color: var(--cor-P1);
   color: var(--cor-B0);
+  font-size: 8pt;
+  transition: all 1s;
   display: inline-flex;
   text-align: start;
 }
@@ -37,6 +39,9 @@
   width: 200px;
   transition: all 1s;
   outline: none;
+  font-size: 10pt;
+  margin-left: 5px;
+  padding-left: 5px;
 }
 
 .container-search {
