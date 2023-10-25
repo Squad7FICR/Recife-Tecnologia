@@ -4,7 +4,8 @@ export default function InitdataLoad() {
             function exibirDataAtual() {
                 var dataAtual = new Date();
                 var dataFormatada = dataAtual.toLocaleDateString();
-                document.getElementById("data-atual").textContent = dataFormatada;
+                document.getElementById("data-atual1").textContent = dataFormatada;
+                document.getElementById("data-atual2").textContent = dataFormatada;
             }
 
             function exibirHoraAtual() {
@@ -14,7 +15,8 @@ export default function InitdataLoad() {
                         hour: '2-digit',
                         minute: '2-digit'
                     });
-                    document.getElementById("hora-atual").textContent = horaFormatada
+                    document.getElementById("hora-atual1").textContent = horaFormatada
+                    document.getElementById("hora-atual2").textContent = horaFormatada
                 }
 
                 atualizarHora();
