@@ -10,18 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/Squad7FICR/Recife-Tecnologia.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Squad7FICR/Recife-Tecnologia/issues"
   },
-  "homepage": "https://github.com/Squad7FICR/Recife-Tecnologia#readme",
-  "devDependencies": {
-    "eslint": "^8.52.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
-  }
+  "homepage": "https://github.com/Squad7FICR/Recife-Tecnologia#readme"
 }

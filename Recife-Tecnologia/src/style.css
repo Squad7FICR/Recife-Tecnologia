@@ -1,0 +1,9 @@
+@import './css/geral/geral.css';
+
+
+
+
+/*utility*/ 
+@import './css/utility/colors.css';
+@import './css/utility/fonts.css';
+@import './css/utility/buttons.css';
