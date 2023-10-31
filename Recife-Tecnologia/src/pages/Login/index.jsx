@@ -1,20 +1,17 @@
+//importing  components
+import Form from '../../components/Form';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+import withBodyStyles from '../../components/StylesBody.jsx';
+import testeImage from '../../assets/teste1.jpeg';
 
-import '../Login/style.css';
+//importing styles & responsiveSTYLES.
+import '../../style.css';
+import './style.css';
+//importing assets
+
 import loginImage from '../../assets/WomanPickupRelatories.jpg';
-import loginLogo from '../../assets/marca_vertical_laranja.png';
 
 const Login = () => {
-  const Button = ({ nome }) => {
-    return (
-      <button type="submit" className="button-m" style={{ marginTop: 20 }}>
-        {nome}
-      </button>
-    );
-  };
-
   return (
     <div className="login-container">
       <div className="login-content">
@@ -26,47 +23,23 @@ const Login = () => {
           className="login-content_img"
         />
         <div className="login-form-container">
-          <form id="loginForm">
-            <img
-              src={loginLogo}
-              width={200}
-              alt=""
-              className="login-content_form_img"
-            />
-            <div className="login-form_content">
-              <label htmlFor="login" className="font-1-m">
-                Insira seu email:
-              </label>
-              <input
-                type="text"
-                name="login"
-                id="login"
-                placeholder="seuemail@.com"
-                className="login-form_input"
-                autoComplete="username"
-              />
-              <label htmlFor="password" className="font-1-m">
-                Insira sua senha:
-              </label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="*******"
-                className="login-form_input"
-                autoComplete="current-password"
-              />
-              <a href="#" className="font-1-pp" id="recoveryPass">
-                Esqueceu a senha?
-              </a>
-              <Button nome={'Entrar'} />
-
-              <Link to="/Register">Teste</Link>
-            </div>
-          </form>
+          <Form />
         </div>
       </div>
     </div>
   );
 };
-export default Login;
+
+const styles = `
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh;
+  background: url(${testeImage})   fixed;
+`;
+
+const LoginWithStyledBody = withBodyStyles(Login, styles);
+
+export default LoginWithStyledBody;

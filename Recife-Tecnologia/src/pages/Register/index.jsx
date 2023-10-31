@@ -5,9 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 const Register = () => {
   return (
     <div>
-      <h1>Register</h1>
-
-      <Link to="/">Login</Link>
+      <h1>hello world</h1>
+      <Link to="/">voltar</Link>
     </div>
   );
 };

@@ -1,0 +1,245 @@
+
+.login-container {
+
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  border-radius: 20px;
+  background-color: var(--cor-B0);
+  box-shadow: 0px 0px 0px 1px #FF7707;
+  overflow: hidden;
+  margin: 20px 30px 20px 30px;
+  padding: 20px;
+  display: flex;
+}
+
+.login-content {
+  
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--cor-B0);
+  text-align: center;
+  padding: 20px;
+  gap: 80px;
+  border-radius: 30px;
+  display: grid;
+  justify-content: center;
+  
+}
+
+
+.login-content_img {
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 0px rgba(194, 194, 194, 0.25);
+  border: 1px solid #B6AAAA;
+  margin: 180px 60px 180px 60px;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.login-form-container {
+  
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid #B6AAAA;
+  background: var(--B1, #FFF);
+  box-shadow: 2px 2px 2px 0px rgba(194, 194, 194, 0.25);
+  margin: 120px 20px 120px 20px;
+  max-width: 360px;
+  max-height: 480px;
+  align-items: center;
+  display: flex;
+  padding: 20px;
+}
+
+
+.login-content_form_img {
+  margin: 10px 70px 10px 70px;
+}
+
+
+.login-form_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;   
+}
+
+.login-form_content a#recoveryPass {
+  color: var(--COR-C1);
+  text-decoration: none;
+  margin: 10px 0px 10px 185px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.login-form_content a#recoveryPass:hover {
+color: var(--COR-L1);
+transition: 0.3s;
+}
+
+.login-form_content button#enterAccount {
+  margin: 10px 0px 10px 0px;
+}
+
+.login-form_content a#enterAccount:hover {
+  background-color: var(--COR-L0);
+  color: var(--cor-B1);
+  transition: 0.5s;
+}
+
+
+
+.login-form_content label {
+  margin: 5px 0px;
+  margin-right: 160px;
+}
+
+
+.login-form_input {
+  width: 100%;
+  height: 40px;
+  flex-shrink: 0;
+  margin: 5px 0px;
+  padding: 0px 10px;
+  border-radius: 8px;
+  border: 1px solid #B6AAAA;
+  background: var(--B0, #FFF);
+  box-shadow: 2px 2px 2px 0px rgba(194, 194, 194, 0.25);
+  text-align: center;
+}
+
+
+.login-form_input:focus {
+  border: 1px solid var(--COR-L0);
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* responsive */
+
+
+@media (max-width: 1920px) {
+  .login-container {
+      padding-top: 10px;
+      margin-bottom: 10px;
+  }
+  .login-content {
+      max-height: 600PX;
+  }
+  .login-form-container {
+      margin-top: 60px;
+      margin-bottom: 30px;
+  }
+  .login-content_img {
+      margin-top: 130px;
+  }
+}
+@media (max-width: 1366px) {
+  .login-container {
+      padding-top: 10px;
+  }
+}
+
+
+@media (max-width: 1366px) {
+  .login-container {
+      padding-top: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+      background-color: white;
+  }
+  .login-container {
+      background:white;
+      border: none;
+      box-shadow: none;
+  }
+  .login-content {
+      grid-template-columns: 1fr;
+      gap: 0px;
+      margin: 30px 10px 30px 10px;
+      border: 1px solid #B6AAAA;;
+      
+  }
+  .login-content_img {
+      display: none;
+  }
+  .login-form-container {
+      margin: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      border: none;
+  }
+  .login-content_form_img {
+      margin: 10px 70px 10px 70px;
+
+  }
+  .login-form_content {
+      padding: 0px;
+  }
+  .login-form_content a#recoveryPass {
+      margin-top: 5px;
+  }
+  .login-form_content button#enterAccount {
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+      background-color: white;
+  }
+  .login-form-container {
+      max-width: 250px;
+      width: auto;
+      border: none;
+  }
+  .login-container {
+      background:white;
+      border: none;
+      box-shadow: none;
+  }
+  
+  .login-content {
+      
+      border: 1px solid #B6AAAA;;
+  }
+  .login-content_form_img {
+      margin: 10px 10px 10px 10px;
+  }
+  .login-form_content {
+      max-width: 200px;
+  }
+  .login-form_content label {
+      font-size: 16px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      margin-left: 70px;
+  }
+  .login-form_content a#recoveryPass {
+      margin: 5px 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .login-content {
+      margin: 60px 0px 60px 0px;
+      width: 200px;
+      
+  }
+}
+
+
+
+
+
