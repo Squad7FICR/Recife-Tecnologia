@@ -6,9 +6,8 @@ const Register = () => {
   return (
     <div>
       <h1>Register</h1>
-      <BrowserRouter>
-        <Link to="/">Login</Link>
-        </BrowserRouter>
+
+      <Link to="/">Login</Link>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 
 const AppRoutes = () => {
+  console.log('Passou por aqui');
   return (
     <BrowserRouter>
       <Routes>
