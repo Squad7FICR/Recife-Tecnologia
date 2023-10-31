@@ -23,5 +23,8 @@ npm init -y
 cd Recife-Tecnologia
 ```
 ```
+npm install
+```
+```
 npm run dev 
 ```
