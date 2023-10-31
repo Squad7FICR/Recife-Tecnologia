@@ -14,11 +14,20 @@ Projeto dos alunos da residência tecnológica II, do porto digital.
 ## Notas para o usuario:
 Caro usuário, nesta versão do projeto você precisará seguir estes passos:
 
-# Instalação dos pacotes de dependências do projeto (no bash):
+# Instalação dos pacotes de dependências do projeto (NPM VERSION):
 
 ```
-npm init
+npm init -y
 ```
 ```
-npm init @eslint/config
+npm create vite@latest
+```
+```
+cd Recife-Tecnologia
+```
+```
+npm i react-firebase-hooks
+```
+```
+npm run dev
 ```
