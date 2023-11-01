@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from '../pages/Login';
-import Register from '../pages/Register';
+import RecoveryPass from '../pages/RecoveryPass';
+import withBodyStyles from '../components/StylesBody';
 
 const AppRoutes = () => {
   console.log('Passou por aqui');
@@ -8,7 +9,7 @@ const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />}></Route>
+        <Route path="/RecoveryPass" element={<RecoveryPass />}></Route>
       </Routes>
     </BrowserRouter>
   );
