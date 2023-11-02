@@ -1,5 +1,6 @@
 //importing  components
 import Form from '../../components/Form';
+import FormRecoveryv3 from '../../components/FormRecovery';
 import React from 'react';
 import withBodyStyles from '../../components/StylesBody.jsx';
 import testeImage from '../../assets/teste1.jpeg';
@@ -13,17 +14,22 @@ import loginImage from '../../assets/WomanPickupRelatories.jpg';
 
 const Login = () => {
   return (
-    <div className="login-container">
-      <div className="login-content">
-        <img
-          src={loginImage}
-          alt=""
-          width={560}
-          height={360}
-          className="login-content_img"
-        />
-        <div className="login-form-container">
-          <Form />
+    <div>
+      <div className="container-recovery-overlay">
+          <FormRecoveryv3 />
+      </div>
+      <div className="login-container">
+        <div className="login-content">
+          <img
+            src={loginImage}
+            alt=""
+            width={560}
+            height={360}
+            className="login-content_img"
+          />
+          <div className="login-form-container">
+            <Form />
+          </div>
         </div>
       </div>
     </div>

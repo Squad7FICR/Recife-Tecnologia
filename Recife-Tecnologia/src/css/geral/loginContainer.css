@@ -41,7 +41,6 @@
 
 
 .login-form-container {
-
   flex-direction: column;
   border-radius: 20px;
   border: 1px solid #B6AAAA;
@@ -53,6 +52,35 @@
   align-items: center;
   display: flex;
   padding: 20px;
+}
+
+.recovery-form-container {
+  flex-direction: column;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #FF7707;
+  background: var(--B1, #FFF);
+  box-shadow: 2px 2px 2px 0px rgba(194, 194, 194, 0.25);
+  max-width: 360px;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+
+
+.container-recovery-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
 }
 
 
@@ -67,6 +95,7 @@
   align-items: center;
   padding: 20px;
 }
+
 
 .login-form_content a#recoveryPass {
   color: var(--COR-C1);

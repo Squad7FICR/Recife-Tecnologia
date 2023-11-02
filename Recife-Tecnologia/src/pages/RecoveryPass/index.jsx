@@ -6,6 +6,7 @@ import loginImage from '../../assets/ForgotPass.svg';
 import FormRecovery from '../../components/FormRecovery.jsx';
 import withBodyStyles from '../../components/StylesBody.jsx';
 import testeImage from '../../assets/teste1.jpeg';
+import FormRecoveryv3 from '../../components/FormRecovery.jsx';
 
 const RecoveryPass = () => {
   return (
@@ -18,7 +19,7 @@ const RecoveryPass = () => {
           height={360}
           className="login-content_img"
         />
-        <div className="login-form-container">
+        <div className="recovery-form-container">
           <FormRecovery />
         </div>
       </div>
