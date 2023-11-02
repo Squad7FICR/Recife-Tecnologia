@@ -1,0 +1,36 @@
+#teste-brackground, 
+.active{
+  width: 500px;
+  height: 400px;
+  background-color: pink;
+  color: black;
+  display: block;
+  position: absolute;
+  z-index: 999;
+  justify-content: center;
+  margin: 120px 60px 120px 360px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+
+.teste1 {
+  display: flex;
+  margin-top: 40px;
+}
+ input {
+  display: flex;
+  width: 200px;
+  height: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+
+
+
