@@ -2,7 +2,6 @@
 import Form from '../../components/Form';
 import FormRecoveryv3 from '../../components/FormRecovery';
 import React from 'react';
-import React, { Component } from 'react';
 import withBodyStyles from '../../components/StylesBody.jsx';
 import testeImage from '../../assets/teste1.jpeg';
 
@@ -22,19 +21,6 @@ const Login = () => {
       <div className="container-recovery-overlay">
           <FormRecoveryv3 />
       </div>
-
-      <div className="active">
-        <img src={logoImage} alt="" width={200} style={{ marginTop: 40 }} />
-        <div className="teste1">
-          <form action="post">
-            <label htmlFor="email">Insira seu email abaixo:</label>
-            <input type="email" id="email" className="input-teste" />
-            <Button type="submit" nome={'Enviar'} />
-          </form>
-        </div>
-      </div>
-
-
       <div className="login-container">
         <div className="login-content">
           <img
