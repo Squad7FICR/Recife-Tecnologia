@@ -1,20 +1,35 @@
 import React from 'react';
 import loginLogo from '../assets/marca_vertical_laranja.png';
-import Button from './button';
 import { Link } from 'react-router-dom';
+import {useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth';
+import { auth } from '../services/firebase-config';
+import { useState } from 'react';
 
-import FormRecoveryv3 from '../components/FormRecovery';
 
-import useEmailValidation from '../js/Regex';
 
-const Form = () => {
-  const { email, emailError, handleEmailChange, validateEmail } =
-    useEmailValidation();
-  // fim //
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    validateEmail();
-  };
+function Form() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+  function handleLogin(e) {
+    e.preventDefault();
+    signInWithEmailAndPassword(email, password);
+  }
+  if(loading){ // se achar melhor criamos ao para carregar a pagina.
+    return <p>Carregando...</p>;
+  }
+  if(user){ //Criando a pagina do dash colocarémos para redirecionar para a pagina do dash.
+    return <p>Logado</p>;
+  }
+  if(error){ //Vamos precisar criar uma mensagem de erro.
+    return  <a href="/">Erro ao logar, clique aqui e tente novamente</a>;
+  }
   const recoveryPass = () => {
     const corpo = document.querySelector('body');
     const recoveryPassForm = document.querySelector('.container-recovery-overlay');
@@ -23,10 +38,8 @@ const Form = () => {
       corpo.style.overflow = 'hidden';
     }
   };
-
   return (
-    <div>
-      <form id="loginForm" onSubmit={handleSubmit}>
+      <div id="loginForm">
         <img
           src={loginLogo}
           width={200}
@@ -38,36 +51,28 @@ const Form = () => {
             Insira seu email:
           </label>
           <input
-            type="text"
-            name="login"
-            id="login"
-            placeholder="seuemail@.com"
+            placeholder='seuemail@.com'
+            type='email'
             className="login-form_input"
-            autoComplete="username"
-            value={email}
-            onChange={handleEmailChange}
+            autoComplete='email'
+            onChange={e=>setEmail(e.target.value)}
           />
-          {emailError && <p>{emailError}</p>}
           <label htmlFor="password" className="font-1-m">
             Insira sua senha:
           </label>
           <input
             type="password"
-            name="password"
-            id="password"
             placeholder="*******"
             className="login-form_input"
-            autoComplete="current-password"
+            onChange={e=>setPassword(e.target.value)}
           />
           <Link className="font-1-pp" id="recoveryPass" onClick={recoveryPass}>
             Esqueceu a senha?
           </Link>
-          <Link>CLIQUE AQUI</Link>
-          <Button type="submit" nome={'Entrar'} />
+          <button onClick={handleLogin} className='button-m' >Entrar</button>
 
         </div>
-      </form>
-    </div>
+      </div>
   );
 };
 
