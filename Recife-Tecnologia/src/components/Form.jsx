@@ -1,6 +1,6 @@
 import React from 'react';
 import loginLogo from '../assets/marca_vertical_laranja.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth';
 import { auth } from '../services/firebase-config';
 import { useState } from 'react';
@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 
 function Form() {
+  const navegate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -25,7 +26,7 @@ function Form() {
     return <p>Carregando...</p>;
   }
   if(user){ //Criando a pagina do dash colocarémos para redirecionar para a pagina do dash.
-    return <p>Logado</p>;
+    return navegate('/Dashboard');
   }
   if(error){ //Vamos precisar criar uma mensagem de erro.
     return  <a href="/">Erro ao logar, clique aqui e tente novamente</a>;

@@ -1,0 +1,139 @@
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    .container-search {
+        order: 2;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .user-menu {
+        order: 1;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+
+    .container-menu {
+        order: 3;
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #ul-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px; 
+        background: var(--cor-P2);
+        transition: 0.6s;
+        z-index: 1000;
+    }
+    .container-search {
+        margin-left: 20px;
+    }
+    #nav-menu.active #ul-menu {
+        display: block;
+    }
+
+    #hamburger {
+        cursor: pointer;
+        display: block;
+        margin-top: 20px;
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+    
+    #hamburger .bar {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+    
+    #hamburger::after,
+    #hamburger::before,
+    #hamburger div {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: var(--COR-L0);
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    #hamburger.closed::before {
+        transform: rotate(45deg);
+        margin-top: 25px;
+        top: 0px;
+        transform-origin: center;
+    }
+    
+    #hamburger.closed::after {
+        transform: rotate(-45deg);
+        bottom: 7px;
+        transform-origin: center;
+    }
+    
+    #hamburger.closed div {
+        display: none;
+    }
+
+    
+   
+    #mobile-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: var(--cor-B0);
+        transition: 0.6s;
+        z-index: 1000;
+        width: 200px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    #mobile-menu.active {
+        display: block;
+    }
+    
+    #mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #mobile-menu li {
+        margin: 10px 0;
+    }
+    
+    #mobile-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: var(--cor-c1);
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    
+    #mobile-menu a:hover {
+        background-color: #ddd;
+    }
+    
+
+}
