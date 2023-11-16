@@ -4,6 +4,7 @@ import RecoveryPass from '../pages/RecoveryPass';
 import RecTeste from '../pages/RecoveryPass/RecTeste';
 import withBodyStyles from '../components/StylesBody';
 import Dashboard from '../pages/Dashboard';
+import Relatorio from '../pages/Relatório';
 
 const AppRoutes = () => {
   console.log('Passou por aqui');
@@ -11,9 +12,9 @@ const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/RecoveryPass" element={<RecoveryPass />}></Route>{' '}
         <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/RecTeste" element={<RecTeste />}></Route>
+        <Route path="/Relatorio" element={<Relatorio />} />
+
       </Routes>
     </BrowserRouter>
   );

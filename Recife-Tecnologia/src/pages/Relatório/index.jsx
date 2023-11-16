@@ -4,18 +4,18 @@ import { useState, useEffect } from 'react';
 import { auth } from '../../services/firebase-config';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 //importing styles & responsiveSTYLES.
-import '../../css/dashboard/dashboard.css';
-import '../../css/responsive/DashboardResponse.css';
+import '../../css/relatório/relatório.css'
+import '../../css/responsive/Relatórioresponse.css';
 import exit from '../../assets/icons8-exit.gif';
 import find from '../../assets/find.png';
 import { usePageTitle } from '../../main.jsx';
 
-function TitleDashboard() {
-    usePageTitle('Recife Tecnologia | Dashboard');
+function Titlerelatorio(){
+    usePageTitle('Recife Tecnologia | Relatório');
 }
 
-const Dashboard = () => {
-    TitleDashboard();
+const Relatorio = () => {
+    Titlerelatorio();
     const [dataAtual, setDataAtual] = useState('');
     const [horaAtual, setHoraAtual] = useState('');
     const [user, setUser] = useState({});
@@ -69,14 +69,14 @@ const Dashboard = () => {
                             <li><a href="/Relatorio">Relatórios</a></li>
                             <li><a id="hora-atual1">{horaAtual}</a></li>
                             <li><a id="data-atual1">{dataAtual}</a></li>
-                            <li><a >{user?.email}</a></li>
+                            <li><a href="">{user?.email}</a></li>
                             <li><a onClick={logOut} href='/'><img src={exit} alt="Exit Icon" width="24" height="24" /></a></li>
                         </ul>
                     </nav>
                     <div id="mobile-menu">
                         <ul>
                             <li><a href="/Dashboard">Dashboard</a></li>
-                            <li><a href="/Relatorio">Relatórios</a></li>
+                            <li><a href="/Relatorio">Relatório</a></li>
                             <li><a id="hora-atual2">{horaAtual}</a></li>
                             <li><a id="data-atual2">{dataAtual}</a></li>
                             <li><a>Nome Cliente</a></li>
@@ -85,11 +85,10 @@ const Dashboard = () => {
                     </div>
                 </div>
             </header>
-            <div className="container-dashboard">
-                <iframe title="Dashboard" width="1500" height="1600" src="https://app.powerbi.com/reportEmbed?reportId=2b32a6bc-b3f3-4ed7-b33b-cdbeb7b6dc22&autoAuth=true&ctid=2009dfae-df11-49c7-804d-fda8d5cd9865" frameborder="0" allowFullScreen="true"></iframe>
+            <div className="container-relatório">
             </div>
         </div>
     );
 };
 
-export default Dashboard;
+export default Relatorio;

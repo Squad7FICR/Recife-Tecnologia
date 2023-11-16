@@ -4,7 +4,7 @@ import FormRecoveryv3 from '../../components/FormRecovery';
 import React from 'react';
 import withBodyStyles from '../../components/StylesBody.jsx';
 import testeImage from '../../assets/teste1.jpeg';
-
+import { usePageTitle } from '../../main.jsx';
 //importing styles & responsiveSTYLES.
 import '../../style.css';
 import './style.css';
@@ -15,7 +15,11 @@ import logoImage from '../../assets/marca_vertical_laranja.png';
 import FormRecovery from '../../components/FormRecovery';
 import Button from '../../components/button';
 
+function TitleLogin() {
+  usePageTitle('Recife Tecnologia | Login');
+}
 const Login = () => {
+ TitleLogin();
   return (
     <div>
       <div className="container-recovery-overlay">
