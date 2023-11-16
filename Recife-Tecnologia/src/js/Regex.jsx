@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// useEmailValidation.js
+import { useState } from 'react';
 
 const useEmailValidation = () => {
   const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
