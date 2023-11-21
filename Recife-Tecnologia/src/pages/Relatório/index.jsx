@@ -1,8 +1,11 @@
 //importing  components
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
 import { auth } from '../../services/firebase-config';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 //importing styles & responsiveSTYLES.
 import '../../css/relatório/relatório.css'
 import '../../css/responsive/Relatórioresponse.css';
@@ -10,29 +13,51 @@ import exit from '../../assets/icons8-exit.gif';
 import find from '../../assets/find.png';
 import { usePageTitle } from '../../main.jsx';
 
+
 function Titlerelatorio() {
     usePageTitle('Recife Tecnologia | Relatório');
 }
 
-
+const ComponentToPrint = React.forwardRef(({ children }, ref) => (
+    <div ref={ref} className="container-folharelatorio">
+        {children}
+    </div>
+));
 
 const Relatorio = () => {
     Titlerelatorio();
 
+    /* const para imprimir a folha de relatório*/
+    const componentRef = useRef();
+    const handlePrint = useReactToPrint({
+        content: () => componentRef.current,
+    });
+    /* const para filtrar por data os dados do relatório.*/
     const handleFiltrarClick = () => {
         const novoDataInicio = document.getElementById('dataInicio').value;
         const novoDataFim = document.getElementById('dataFim').value;
         const periodo = document.getElementById('periodo');
 
-        // Verifica se a data inicial é menor ou igual à data final
         if (new Date(novoDataInicio) <= new Date(novoDataFim)) {
             periodo.innerHTML = `Período: ${novoDataInicio} - ${novoDataFim}`;
         } else {
-            // Caso contrário, exibe uma mensagem de erro e mantém os estados atuais
+
             alert('Selecione uma data inicial menor ou igual à data final.');
         }
     };
+    /* const para baixar a folha de relatório*/
+    const handleDownloadClick = async () => {
+        const content = document.getElementById('folharelatorio');
 
+        try {
+            const canvas = await html2canvas(content);
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            pdf.addImage(canvas.toDataURL('image/jpeg', 1.0), 'JPEG', 0, 0, 210, 297);
+            pdf.save('folha_relatorio.pdf');
+        } catch (error) {
+            console.error('Erro ao gerar PDF:', error);
+        }
+    };
 
 
 
@@ -77,10 +102,6 @@ const Relatorio = () => {
         <div className='body'>
             <header className="header-bg">
                 <div className="header-container">
-                    <div className="container-search">
-                        <div className="container-imgsearch"><img src={find} alt="search" /></div>
-                        <input type="search" name="search" placeholder="Pesquisar..." className="search" />
-                    </div>
                     <nav className="user-menu font-1-m" id="nav-menu">
                         <span id="hamburger">
                             <div></div>
@@ -109,8 +130,8 @@ const Relatorio = () => {
             <div className="container-relatório">
                 <div className='submenu'>
                     <ul>
-                        <li><a >Baixar</a></li>
-                        <li><a >Imprimir</a></li>
+                        <li><a id="downloadButton" onClick={handleDownloadClick} >Baixar</a></li>
+                        <li><a onClick={handlePrint}>Imprimir</a></li>
                         <li>
                             <a id='filtrodata'>
                                 Filtrar período
@@ -126,54 +147,108 @@ const Relatorio = () => {
                                     name="data"
                                     id="dataFim"
                                 />
-                                <button onClick={handleFiltrarClick}>Filtrar</button>
+                                <button onClick={handleFiltrarClick} className='buttonFiltrar'>Filtrar</button>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div className='container-folharelatorio'>
-                    <div className='folharelatorio'>
-                        <h1>Recife Tecnologia</h1>
-                        <h2>Folha de relatório</h2>
-                        <p id="periodo">Período: - </p>
-                        <p>Data extração: {dataAtual}</p>
+                <ComponentToPrint ref={componentRef}>
+                    <div className='container-folharelatorio'>
+                        <div className='mensagem'>
+                            <h1>Pré-visualização indisponível para o tamanho da tela.</h1>
+                            <p>Filtre o período e clique em Baixar ou imprimir.</p>
 
-                        <h3>Chamados por categoria:</h3>
-                        <table>
-                            <tr>
-                                <th>Soluções</th>
-                                <th>Atribuições</th>
-                                <th>Problemas</th>
-                                <th>Chamadas</th>
-                                <th>Dúvidas</th>
-                            </tr>
-                            <tr>
-                                <td>57</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                            </tr>
-                        </table>
+                        </div>
+                        <div className='folharelatorio' id='folharelatorio'>
+                            <div className='textocentralizado'>
+                                <h1>Recife Tecnologia - Folha de relatório</h1>
+                                <p id="periodo">Período: - </p>
+                                <p>Data extração: {dataAtual}</p>
+                            </div>
 
-                        <h3>Usuários:</h3>
-                        <table>
-                            <tr>
-                                <th>Usuários</th>
-                                <th>Usuários Principais</th>
-                                <th>Usuários Telefone</th>
-                            </tr>
-                            <tr>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                            </tr>
-                        </table>
+                            <div className='container-tabela'>
+                                <h3 className='titulodatabela'>Chamados por status</h3>
+                                <table className='tabelarelatorio'>
+                                    <tr>
+                                        <th>Novos: </th>
+                                        <th>Pendentes:</th>
+                                        <th>Solucionados: </th>
+                                        <th>Atribuídos: </th>
+                                        <th>Planejados: </th>
+                                        <th>Fechados: </th>
 
-                        <p>Lorem ipsum...</p>
+                                    </tr>
+                                    <tr>
+                                        <td>57</td>
+                                        <td>89</td>
+                                        <td>92</td>
+                                        <td>41</td>
+                                        <td>79</td>
+                                        <td>126</td>
+                                    </tr>
+                                </table>
 
+                                <h3 className='titulodatabela'>Categoria de chamados</h3>
+                                <table className='tabelarelatorio'>
+                                    <tr>
+                                        <th>Duvidas: </th>
+                                        <th>Outros: </th>
+                                        <th>Problemas: </th>
+                                        <th>Por acesso: </th>
+                                        <th>Criar User: </th>
+                                        <th>Falha rotina: </th>
+                                    </tr>
+                                    <tr>
+                                        <td>53</td>
+                                        <td>52</td>
+                                        <td>41</td>
+                                        <td>30</td>
+                                        <td>21</td>
+                                        <td>12</td>
+                                    </tr>
+                                </table>
+
+                                <h3 className='titulodatabela'>Chamado por origem de requisição</h3>
+                                <table className='tabelarelatorio'>
+                                    <tr>
+                                        <th>HelpDesk: </th>
+                                        <th>Telefonema: </th>
+                                        <th>WhatsApp: </th>
+                                        <th>Teams: </th>
+                                        <th>E-mail: </th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>100</td>
+                                        <td>300</td>
+                                        <td>150</td>
+                                        <td>780</td>
+                                        <td>166</td>
+
+                                    </tr>
+                                </table>
+                                <table className='tabelarelatorioTOTAL'>
+                                    <tr>
+                                        <th className='titulodatabela'>Total de chamados</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>2.189</td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+
+                            <footer className='footerRelatorio'>
+                                <p>Recife Tecnologia</p>
+                                <p>Edf. Dos Despachantes Aduaneiros Praça do Arsenal da Marinha - Recife, PE, 50030-360</p>
+                                <p>Telefone: (081) 30401010</p>
+                                <span>Email: recifetecnologia@rectecnologia.com.br</span>
+                            </footer>
+                        </div>
                     </div>
-                </div>
+                </ComponentToPrint>
             </div>
         </div>
     );
