@@ -1,16 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-  background-color: var(--cor-P1);
-}
 
-.header-bg {
-  background-color: var(--cor-P1);
-  padding: 30px 0 30px 0;
-}
 
 
 .container-imgsearch {
@@ -29,7 +17,7 @@ body{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border: none;
-  background-color: var(--cor-P0);
+  background-color: var(--cor-P1);
   color: var(--cor-B0);
   font-size: 8pt;
   transition: all 1s;

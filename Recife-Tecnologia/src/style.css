@@ -1,15 +1,7 @@
-@import './css/geral/geral.css';
-
-
-@import '../src/pages/RecoveryPass/teste.css';
-
-
 /*utility*/ 
 @import './css/utility/colors.css';
 @import './css/utility/fonts.css';
 @import './css/utility/buttons.css';
-
-
 
 /*containers*/ 
 @import './css/geral/loginContainer.css';
