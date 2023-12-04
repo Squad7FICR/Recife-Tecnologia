@@ -1,8 +1,31 @@
-# React + Vite
+# Recife-Tecnologia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto dos alunos da residência tecnológica II, do porto digital.
 
-Currently, two official plugins are available:
+## Desafio:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`criar uma dashboard onde possa ser montado um relatório de forma automatizada por período (data de X à Y; Mensal; Trimestral; Semestral; Anual)`
+
+## Tecnologias usadas até o momento:
+
+`FrontEnd: React + CSS`
+`BackEnd: none`
+`Servidores: POWERBI, FIREBASE (AUT USERS.), SQL`
+
+## Notas para o usuario:
+
+Caro usuário, nesta versão do projeto você precisará seguir estes passos:
+
+# Instalação dos pacotes de dependências do projeto (NPM VERSION):
+
+```
+npm init -y
+```
+
+```
+npm install
+```
+
+```
+npm run dev
+```
