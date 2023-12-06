@@ -15,6 +15,7 @@ import { usePageTitle } from '../../main.jsx';
 
 function Titlerelatorio() {
   usePageTitle('Recife Tecnologia | Relatório');
+  console.clear();
 }
 
 const ComponentToPrint = React.forwardRef(({ children }, ref) => (
