@@ -13,7 +13,7 @@ Projeto dos alunos da residência tecnológica II, do porto digital.
 `Servidores: POWERBI, FIREBASE (AUT USERS.), SQL`
 
 ## Notas para o usuario:
-
+> O projeto conta com email e senha padrão para testes, ```squad7@gmail.com (email) + teste123 (senha)```
 Caro usuário, nesta versão do projeto você precisará seguir estes passos:
 
 # Windows 
