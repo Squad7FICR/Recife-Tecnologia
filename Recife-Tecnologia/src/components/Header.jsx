@@ -1,21 +1,21 @@
 //importing  components
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { auth } from '../../services/firebase-config';
+import { auth } from '../services/firebase-config.js';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 
 //importing styles & responsiveSTYLES.
-import '../../css/dashboard/dashboard.css';
-import '../../css/responsive/DashboardResponse.css';
-import exit from '../../assets/icons8-exit.gif';
-import find from '../../assets/find.png';
-import { usePageTitle } from '../../main.jsx';
+import '../css/dashboard/dashboard.css';
+import '../css/responsive/DashboardResponse.css';
+import exit from '../assets/icons8-exit.gif';
+import find from '../assets/find.png';
+import { usePageTitle } from '../main.jsx';
 
 function TitleDashboard() {
   usePageTitle('Recife Tecnologia | Dashboard');
 }
 
-const Teste = () => {
+const Header = () => {
   TitleDashboard();
   const [dataAtual, setDataAtual] = useState('');
   const [horaAtual, setHoraAtual] = useState('');
@@ -123,4 +123,4 @@ const Teste = () => {
   );
 };
 
-export default Teste;
+export default Header;
