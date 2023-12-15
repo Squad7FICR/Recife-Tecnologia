@@ -1,6 +1,4 @@
-
-
-
+/* Dashboard Header */
 .container-imgsearch {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -121,4 +119,93 @@ input[type="text"] {
 
 #mobile-menu {
   display: none;
+}
+
+/* Dashboard Main */
+
+.dashboard-main {
+  display: grid;
+  max-width: 1200px;
+  margin: 100px auto 0;
+  color: white;
+}
+
+.options-role {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.options-role a {
+  color: var(--cor-B0);
+  text-decoration: none;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+.options-role a:hover {
+  color: var(--cor-L0);
+}
+
+.options-role a.active {
+  color: var(--cor-L0);
+}
+
+.options-role a.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--cor-L0);
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.options-role a.active:hover::after {
+  width: 100%;
+}
+
+.dashboard-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+
+
+.dashboard-card {
+  background-color: red;
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px; 
+  grid-column: 1fr;
+}
+
+.card-h1 {
+  font-size: 20px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.card-p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-img {
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+
 }

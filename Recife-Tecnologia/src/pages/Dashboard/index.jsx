@@ -1,20 +1,76 @@
 //importing  components
 import React from 'react';
-import Teste from '../../components/Header';
+import Header from '../../components/Header';
+
+// import images
+import bilola from '../../assets/telephone.svg';
 
 const Dashboard = () => {
   return (
     <div className="body">
       <Header />
-      <div className="container-dashboard">
-        <iframe
-          title="Dashboard"
-          width="1500"
-          height="1600"
-          src="https://app.powerbi.com/reportEmbed?reportId=2b32a6bc-b3f3-4ed7-b33b-cdbeb7b6dc22&autoAuth=true&ctid=2009dfae-df11-49c7-804d-fda8d5cd9865"
-          frameborder="0"
-          allowFullScreen="true"
-        ></iframe>
+      <div className="dashboard-main">
+        <div className="options-role">
+          <option value="">Funcionário</option>
+          <option value="">Origem Chamado</option>
+          <option value="">Últimas 24h</option>
+        </div>
+        <div className="dashboard-data">
+          <div className="dashboard-card">
+            <h1 className="card-h1">Novos chamados</h1>
+            <div className="card-info">
+              <img src={bilola} alt="" className="card-img" />
+              <p id="value-call" className="card-p">
+                null
+              </p>
+            </div>
+          </div>
+          <div className="dashboard-card">
+            <h1 className="card-h1">Novos chamados</h1>
+            <div className="card-info">
+              <img src={bilola} alt="" className="card-img" />
+              <p id="value-call" className="card-p">
+                null
+              </p>
+            </div>
+          </div>
+          <div className="dashboard-card">
+            <h1 className="card-h1">Novos chamados</h1>
+            <div className="card-info">
+              <img src={bilola} alt="" className="card-img" />
+              <p id="value-call" className="card-p">
+                null
+              </p>
+            </div>
+          </div>
+          <div className="dashboard-card">
+            <h1 className="card-h1">Novos chamados</h1>
+            <div className="card-info">
+              <img src={bilola} alt="" className="card-img" />
+              <p id="value-call" className="card-p">
+                null
+              </p>
+            </div>
+          </div>
+          <div className="dashboard-card">
+            <h1 className="card-h1">Novos chamados</h1>
+            <div className="card-info">
+              <img src={bilola} alt="" className="card-img" />
+              <p id="value-call" className="card-p">
+                null
+              </p>
+            </div>
+          </div>
+          <div className="dashboard-card">
+            <h1 className="card-h1">Novos chamados</h1>
+            <div className="card-info">
+              <img src={bilola} alt="" className="card-img" />
+              <p id="value-call" className="card-p">
+                null
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
